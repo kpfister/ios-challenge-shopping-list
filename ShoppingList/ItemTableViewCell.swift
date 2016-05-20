@@ -7,9 +7,38 @@
 //
 
 import UIKit
+protocol ItemTableViewCellDelegate {
+    func itemValueChanged(cell: ItemTableViewCell, isComplete: Bool)
+}
 
-class itemTableViewCell: UITableViewCell {
+class ItemTableViewCell: UITableViewCell {
+    
+    var delegate: ItemTableViewCellDelegate?
+    var items: ShoppingItem?
+    
+    //MARK: - Actions
+    
+    func setUpCellWithItems(items: ShoppingItem) {
+        self.items = items
+        itemLabel.text = items.name
+        completionSwitch.on = Bool(items.isComplete)
+    }
 
+    
+    
+    
+    
+    //MARK: - Outlets 
+    
+    
+    
+    @IBOutlet weak var itemLabel: UITextField!
+    
+    
+    @IBOutlet weak var completionSwitch: UISwitch!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

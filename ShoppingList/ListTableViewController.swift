@@ -27,25 +27,21 @@ class ListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection items: Int) -> Int { // This is a method
+        return ShoppingListItemsController.sharedInstance.items.count //
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("listItem", forIndexPath: indexPath) as? ItemTableViewCell
 
-        // Configure the cell...
-
-        return cell
+        let items = ShoppingListItemsController.sharedInstance.items[indexPath.row]
+        cell?.setUpCellWithItems(items)
+        return cell ?? UITableViewCell()
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

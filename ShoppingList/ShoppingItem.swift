@@ -12,6 +12,8 @@ import CoreData
 
 class ShoppingItem: NSManagedObject {
     
+    static let sharedInstance = ShoppingItem()
+    
     convenience init(name: String, isComplete: Bool, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext){
         let entity = NSEntityDescription.entityForName("ShoppingItem", inManagedObjectContext: context)!
         

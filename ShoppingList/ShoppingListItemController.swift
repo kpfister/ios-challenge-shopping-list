@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import CoreData
+
+class ShoppingListItemsController {
+    static let sharedInstance = ShoppingListItemsController() // This is a singleton
+    
+    var items: [ShoppingItem] // items is an array of ShoppingList.
+    
+    init() { // This init will initialize this class.
+        items = []
+    }
+}
