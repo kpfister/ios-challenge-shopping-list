@@ -22,9 +22,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" onImage="complete" offImage="incomplete" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-9o-2r0">
-                                            <rect key="frame" x="543" y="8" width="51" height="31"/>
-                                        </switch>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EzY-JU-SaS">
                                             <rect key="frame" x="8" y="8" width="478" height="30"/>
                                             <constraints>
@@ -33,6 +30,12 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" onImage="complete" offImage="incomplete" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-9o-2r0">
+                                            <rect key="frame" x="543" y="8" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="completionValueChanged:" destination="b4g-nR-OqT" eventType="valueChanged" id="kyr-XK-W8q"/>
+                                            </connections>
+                                        </switch>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="EzY-JU-SaS" firstAttribute="leading" secondItem="LkP-gf-xkM" secondAttribute="leadingMargin" id="3EB-5Y-ovU"/>
@@ -55,6 +58,9 @@
                     <navigationItem key="navigationItem" title="Shopping List" id="2CA-O5-fEF">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8hB-26-MZn">
                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addItem:" destination="DZl-bY-Bfe" id="18A-oy-Ena"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>

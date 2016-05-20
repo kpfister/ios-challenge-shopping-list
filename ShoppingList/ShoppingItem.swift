@@ -22,8 +22,6 @@ class ShoppingItem: NSManagedObject {
         self.name = name
         self.isComplete = false
         
-        
-        
     }
 
     

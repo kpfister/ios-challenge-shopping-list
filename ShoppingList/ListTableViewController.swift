@@ -9,6 +9,13 @@
 import UIKit
 
 class ListTableViewController: UITableViewController {
+    
+    @IBAction func addItem(sender: AnyObject) {
+//        UILocalNotification.
+    }
+    
+    
+    //MARK: - I want my add button to start a notification
 
     override func viewDidLoad() {
         super.viewDidLoad()

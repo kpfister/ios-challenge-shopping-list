@@ -37,6 +37,13 @@ class ItemTableViewCell: UITableViewCell {
     
     @IBOutlet weak var completionSwitch: UISwitch!
     
+    //MARK: - Actions
+    
+    
+    @IBAction func completionValueChanged(sender: UISwitch) {
+    }
+    
+    
     
     
     override func awakeFromNib() {
